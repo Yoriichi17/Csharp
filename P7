@@ -1,0 +1,25 @@
+using System;
+using System.IO;
+
+class TextCopy
+{
+    static void Main()
+    {
+        string src = @"C:\Users\Anirudh P Nayak\OneDrive\Desktop\c sharp\5thsem\TextCopy\Pseven.txt";
+        //add your systems file path 
+        string dest = "output.txt";
+        
+
+        try
+        {
+            string fc = File.ReadAllText(src);
+            File.WriteAllText(dest, fc);
+            Console.WriteLine("Output file ready!");
+            // check output in bin folder 
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
