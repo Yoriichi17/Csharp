@@ -1,0 +1,68 @@
+using System;
+class Shape
+{
+    public virtual void draw()
+    {
+        Console.WriteLine("Drawing Shape");
+    }
+    public virtual void erase()
+    {
+        Console.WriteLine("Erasing Shape");
+    }
+}
+
+class Circle : Shape
+{
+    public override void draw()
+    {
+        Console.WriteLine("Drawing Circle");
+    }
+
+    public override void erase()
+    {
+        Console.WriteLine("Erasing Circle");
+    }
+}
+
+class Traingle : Shape
+{
+    public override void draw()
+    {
+        Console.WriteLine("Drawing Triangle");
+    }
+
+    public override void erase()
+    {
+        Console.WriteLine("Erasing Traingle");
+    }
+}
+
+
+class Square : Shape
+{
+    public override void draw()
+    {
+        Console.WriteLine("Drawing Square");
+    }
+
+    public override void erase()
+    {
+        Console.WriteLine("Erasing Square");
+    }
+}
+
+class Program10
+{
+    static void Main()
+    {
+        Shape[] sh = new Shape[3];
+        sh[0] = new Circle();
+        sh[1] = new Traingle();
+        sh[2] = new Square();
+        for(int i = 0; i < 3;i++ )
+        {
+            sh[i].draw();
+            sh[i].erase();
+        }
+    }
+}
