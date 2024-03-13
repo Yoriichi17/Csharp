@@ -5,6 +5,7 @@ class TextCopy
 {
     static void Main()
     {
+        //create a textfile and write anything in it make sure path and speeling is correct
         string src = @"C:\Users\Anirudh P Nayak\OneDrive\Desktop\c sharp\5thsem\TextCopy\Pseven.txt";
         //add your systems file path 
         string dest = "output.txt";
