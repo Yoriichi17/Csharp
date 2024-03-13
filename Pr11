@@ -1,0 +1,77 @@
+using System.Numerics;
+
+abstract class Shape
+{
+    public abstract double calcArea();
+    public abstract double calcPeri();
+}
+
+class Circle : Shape
+{
+    double r; 
+    public Circle(double r)
+    {
+        this.r = r;
+    }
+
+    public override double calcArea()
+    {
+        double area = Math.PI * r * r;
+        Console.WriteLine("Area of circle : " +  area);
+        return area;
+    }
+
+    public override double calcPeri()
+    {
+        double peri = Math.PI * r * 2;
+        Console.WriteLine("Perimeter of circle : "+  peri);
+        return peri;
+    }
+}
+
+class Traingle : Shape
+{
+    double s1;
+    double s2;
+    double s3;
+    public Traingle(double s1 , double s2 ,double s3)
+    {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+    }
+
+    public override double calcArea()
+    {
+        double s4 = (s1 + s2 + s3) / 2;
+        double area = Math.Sqrt(s4*(s4-s1)* (s4 - s2) * (s4 - s3));
+        Console.WriteLine("Area of triangle : " + area);
+        return area;
+    }
+
+    public override double calcPeri()
+    {
+        double peri = (s1 + s2 + s3);
+        Console.WriteLine("Perimeter of triangle : " + peri);
+        return peri;
+    }
+}
+
+class Program11
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter the radius of circle : ");
+        double radius = double.Parse(Console.ReadLine());
+        Circle circle = new Circle(radius);
+        circle.calcArea();
+        circle.calcPeri();
+        Console.WriteLine("Enter the sides of triangle : ");
+        double s1 = double.Parse(Console.ReadLine());
+        double s2 = double.Parse(Console.ReadLine());
+        double s3 = double.Parse(Console.ReadLine());
+        Traingle triangle = new Traingle(s1, s2, s3);
+        triangle.calcArea();
+        triangle.calcPeri();
+    }
+}
