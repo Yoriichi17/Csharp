@@ -54,15 +54,24 @@ class Square : Shape
 class Program10
 {
     static void Main()
-    {
-        Shape[] sh = new Shape[3];
-        sh[0] = new Circle();
-        sh[1] = new Traingle();
-        sh[2] = new Square();
-        for(int i = 0; i < 3;i++ )
-        {
-            sh[i].draw();
-            sh[i].erase();
-        }
+    {   
+        Shape sh = new Shape();
+        Circle cr = new Circle();
+        Traingle tr = new Traingle();
+        Square sq = new Square();
+        Console.WriteLine("Generic Shape : ");
+        sh.draw();
+        sh.erase();
+        Console.WriteLine("Circle: ");
+        cr.draw();
+        cr.erase();
+        Console.WriteLine("Triangle : ");
+        tr.draw();
+        tr.erase();
+        Console.WriteLine("Square : ");
+        sq.draw();
+        sq.erase();
+
     }
+
 }
