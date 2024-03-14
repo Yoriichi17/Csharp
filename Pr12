@@ -1,0 +1,56 @@
+using System;
+
+interface Resizable
+{
+    void resizeWidth(int width);
+    void resizeHeight(int height);
+}
+
+class Rectangle : Resizable
+{
+    private int width;
+    private int height;
+    public Rectangle(int width, int height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    public void display()
+    {
+        Console.WriteLine($"RECTANGLE : width = {width} : height = {height}");
+    }
+
+    public void resizeWidth(int nwidth)
+    {
+        width = nwidth;
+        Console.WriteLine("Resized Width : " + nwidth);
+    }
+    public void resizeHeight( int nheight)
+    {
+        height = nheight;
+        Console.WriteLine("Resized height : " +nheight);
+    }
+}
+
+class Program12
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter initial width of rectangle : ");
+        int width = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter initial height of rectangle : ");
+        int height = int.Parse(Console.ReadLine());
+        Console.WriteLine("INITIAL SIZE : ");
+        Rectangle r = new Rectangle(width, height);
+        r.display();
+        Console.WriteLine("Enter new width : ");
+        int nwidth = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter new height : ");
+        int nheight = int.Parse(Console.ReadLine());
+        r.resizeWidth(nwidth);
+        r.resizeHeight(nheight);
+        Console.WriteLine("UPDATED SIZE : ");
+        r.display();
+    }
+}
