@@ -7,7 +7,7 @@ class StackP
     
     public void push(int value)
     {
-        if(top == 5) // 5 determines u need to push 9 values to get overflow
+        if(top == 5) // 5 determines u need to push 5 values to get overflow
         {
             Console.WriteLine("Stack overflow !");
         }
