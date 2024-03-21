@@ -6,7 +6,7 @@ class P6
         Console.WriteLine("Enter the row size of the traingle : ");
         int rows = int.Parse(Console.ReadLine());
         int[,] arr = new int[rows + 1, rows + 1];
-        Console.WriteLine($"Pascal triangle with {rows} rows is : ");
+        Console.WriteLine($"Floyds triangle with {rows} rows is : ");
         int count = 1;
         for (int i = 0; i <=rows; i++)
         {
