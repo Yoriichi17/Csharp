@@ -83,9 +83,6 @@ class Program7
                         break;
             }
 
-            Console.Write("Enter 1 to continue or 0 to terminate  : ");
-            int chu = int.Parse(Console.ReadLine());
-            ch = (chu == 1);
 
         }
 
